@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra-Advanced Scientific & Graphing Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-header">
+            <h1>Scientific Calculator</h1>
+            <div class="header-controls">
+                <button id="themeToggle">🌙</button>
+                <button id="menuToggle">☰</button>
+            </div>
+        </div>
+        
+        <div class="display-section">
+            <div class="single-display" id="singleDisplay">0</div>
+        </div>
+        
+        <div class="calculator-body">
+            <div class="buttons-grid" id="buttonsGrid">
+                <!-- Buttons will be populated by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="slide-menu" id="slideMenu">
+            <div class="menu-header">
+                <h2>Modes</h2>
+                <button id="closeMenu">×</button>
+            </div>
+            <div class="menu-items">
+                <button class="menu-item active" data-mode="scientific">
+                    <span class="menu-icon">∑</span>
+                    <span class="menu-text">Scientific</span>
+                </button>
+                <button class="menu-item" data-mode="programmer">
+                    <span class="menu-icon">⌀</span>
+                    <span class="menu-text">Programmer</span>
+                </button>
+                <button class="menu-item" data-mode="matrix">
+                    <span class="menu-icon">[]</span>
+                    <span class="menu-text">Matrix</span>
+                </button>
+                <button class="menu-item" data-mode="statistics">
+                    <span class="menu-icon">σ</span>
+                    <span class="menu-text">Statistics</span>
+                </button>
+                <button class="menu-item" data-mode="graph">
+                    <span class="menu-icon">📈</span>
+                    <span class="menu-text">Graph</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="graph-container" id="graphContainer" style="display: none;">
+            <canvas id="graphCanvas" width="800" height="400"></canvas>
+            <div class="graph-controls">
+                <button id="resetGraph">Reset View</button>
+                <button id="clearGraph">Clear Graph</button>
+            </div>
+        </div>
+        
+        <div class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <h3>History</h3>
+                <button id="clearHistory">Clear</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <!-- History items will be displayed here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="parser.js"></script>
+    <script src="graph.js"></script>
+    <script src="modes.js"></script>
+    <script src="storage.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
